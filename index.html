@@ -1,720 +1,752 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nekkaz Mohamed Tayeb — CV</title>
-  <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nekkaz Mohamed Tayeb — CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: Georgia, 'Times New Roman', serif;
-      background: #f4f4f9; /* Slight background for screen viewing */
-      color: #1a1a1a;
-      font-size: 11pt;
-      line-height: 1.6;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
+        body {
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            background: #f4f4f9;
+            color: #1a1a1a;
+            font-size: 10pt;
+            line-height: 1.35;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
 
-    /* ── Language Toggle Buttons ── */
-    .lang-toggle {
-      text-align: center;
-      padding: 20px 0;
-      background: #fff;
-      border-bottom: 1px solid #ddd;
-      margin-bottom: 20px;
-    }
+        /* ── Language Toggle Buttons ── */
+        .lang-toggle {
+            text-align: center;
+            padding: 20px 0;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
 
-    .lang-toggle button {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 14px;
-      font-weight: bold;
-      background: #fff;
-      border: 1.5px solid #1a1a1a;
-      color: #1a1a1a;
-      padding: 8px 24px;
-      margin: 0 10px;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: all 0.2s ease;
-    }
+        .lang-toggle button {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            background: #fff;
+            border: 1.5px solid #1a1a1a;
+            color: #1a1a1a;
+            padding: 8px 24px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
 
-    .lang-toggle button:hover {
-      background: #f0f0f0;
-    }
+        .lang-toggle button:hover {
+            background: #f0f0f0;
+        }
 
-    .lang-toggle button.active {
-      background: #1a1a1a;
-      color: #fff;
-    }
+        .lang-toggle button.active {
+            background: #1a1a1a;
+            color: #fff;
+        }
 
-    /* ── CV Container ── */
-    .cv-wrap {
-      max-width: 720px;
-      margin: 0 auto 40px auto;
-      padding: 40px 48px;
-      background: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Soft shadow for screen */
-    }
+        /* ── CV Container ── */
+        .cv-wrap {
+            max-width: 740px;
+            margin: 0 auto 20px auto;
+            padding: 14px 36px 10px;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
 
-    /* ── Header ── */
-    .cv-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      padding-bottom: 16px;
-      margin-bottom: 24px;
-      border-bottom: 1.5pt solid #1a1a1a;
-    }
+        /* ── Header ── */
+        .cv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 8px;
+            margin-bottom: 14px;
+            border-bottom: 1.5pt solid #1a1a1a;
+        }
 
-    .cv-name {
-      font-family: Georgia, serif;
-      font-size: 28pt;
-      font-weight: normal;
-      letter-spacing: -0.3px;
-      color: #1a1a1a;
-      line-height: 1.05;
-      margin: 0 0 5px;
-    }
+        .cv-name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22pt;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: #1a1a1a;
+            line-height: 1.05;
+            margin: 0 0 3px;
+        }
 
-    .cv-subtitle {
-      font-size: 8pt;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: normal;
-      color: #888;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-    }
+        .cv-subtitle {
+            font-size: 9pt;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            color: #555;
+        }
 
-    .cv-contact {
-      text-align: right;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 8.5pt;
-      color: #555;
-      line-height: 1.8;
-    }
+        .cv-contact {
+            text-align: right;
+            font-family: 'Inter', sans-serif;
+            font-size: 8.2pt;
+            color: #555;
+            line-height: 1.55;
+        }
 
-    .cv-contact a {
-      color: #555;
-      text-decoration: none;
-    }
+        .cv-contact a {
+            color: #555;
+            text-decoration: none;
+        }
 
-    /* ── Section ── */
-    .cv-section {
-      margin-bottom: 22px;
-      page-break-inside: avoid;
-    }
+        /* ── Section ── */
+        .cv-section {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
 
-    .cv-section-label {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 7.5pt;
-      font-weight: bold;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #aaa;
-      margin-bottom: 10px;
-      padding-bottom: 5px;
-      border-bottom: 0.5pt solid #ddd;
-    }
+        .cv-section-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 8pt;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #555;
+            margin-bottom: 5px;
+            padding-bottom: 3px;
+            border-bottom: 0.5pt solid #ccc;
+        }
 
-    /* ── Profile ── */
-    .summary-text {
-      font-size: 10pt;
-      color: #444;
-      line-height: 1.75;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+        /* ── Profile ── */
+        .summary-text {
+            font-size: 9pt;
+            color: #333;
+            line-height: 1.4;
+            font-family: 'Inter', sans-serif;
+        }
 
-    /* ── Entry ── */
-    .entry {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 16px;
-      margin-bottom: 16px;
-      page-break-inside: avoid;
-    }
+        /* ── Entry ── */
+        .entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 9px;
+            page-break-inside: avoid;
+        }
 
-    .entry-main { flex: 1; }
+        .entry-main {
+            flex: 1;
+        }
 
-    .entry-role {
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: bold;
-      font-size: 10.5pt;
-      color: #1a1a1a;
-      margin: 0 0 2px;
-    }
+        .entry-role {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 9.5pt;
+            color: #1a1a1a;
+            margin: 0 0 0px;
+        }
 
-    .entry-org {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 9.5pt;
-      color: #777;
-      font-style: italic;
-      margin: 0 0 6px;
-    }
+        .entry-org {
+            font-family: 'Inter', sans-serif;
+            font-size: 8.5pt;
+            color: #666;
+            font-style: italic;
+            margin: 0 0 1px;
+        }
 
-    .entry-date {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 8.5pt;
-      color: #aaa;
-      white-space: nowrap;
-      padding-top: 2px;
-      text-align: right;
-      min-width: 90px;
-    }
+        .entry-date {
+            font-family: 'Inter', sans-serif;
+            font-size: 8pt;
+            color: #888;
+            white-space: nowrap;
+            padding-top: 1px;
+            text-align: right;
+            min-width: 85px;
+        }
 
-    .entry-bullets {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
+        .entry-bullets {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
-    .entry-bullets li {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 9.5pt;
-      color: #444;
-      padding-left: 12px;
-      position: relative;
-      margin-bottom: 4px;
-      line-height: 1.6;
-    }
+        .entry-bullets li {
+            font-family: 'Inter', sans-serif;
+            font-size: 8.5pt;
+            color: #333;
+            padding-left: 10px;
+            position: relative;
+            margin-bottom: 1px;
+            line-height: 1.4;
+        }
 
-    .entry-bullets li::before {
-      content: '\2013';
-      position: absolute;
-      left: 0;
-      color: #bbb;
-    }
+        .entry-bullets li::before {
+            content: '\2013';
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
 
-    /* ── Projects ── */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
+        /* ── Projects ── */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
 
-    .project-item {
-      padding: 10px 12px;
-      border: 0.5pt solid #ddd;
-      background: #fafaf8;
-      page-break-inside: avoid;
-    }
+        .project-item {
+            padding: 6px 9px;
+            border: 0.5pt solid #ddd;
+            background: #fafaf8;
+            page-break-inside: avoid;
+        }
 
-    .project-name {
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: bold;
-      font-size: 9.5pt;
-      color: #1a1a1a;
-      margin-bottom: 4px;
-    }
+        .project-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 6px;
+            margin-bottom: 1px;
+        }
 
-    .project-desc {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 8.5pt;
-      color: #555;
-      line-height: 1.6;
-      margin: 0;
-    }
+        .project-name {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 8.8pt;
+            color: #1a1a1a;
+            margin: 0;
+            line-height: 1.2;
+        }
 
-    /* ── Awards ── */
-    .awards-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px;
-    }
+        .project-tag {
+            font-family: 'Inter', sans-serif;
+            font-size: 6.8pt;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: #666;
+            background: #ededed;
+            padding: 1px 5px;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
 
-    .award-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 9.5pt;
-      color: #444;
-      padding: 7px 10px;
-      border: 0.5pt solid #ddd;
-      background: #fafaf8;
-      page-break-inside: avoid;
-    }
+        .project-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 8pt;
+            color: #444;
+            line-height: 1.38;
+            margin: 0;
+        }
 
-    .award-rank {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 8pt;
-      font-weight: bold;
-      padding: 2px 7px;
-      white-space: nowrap;
-    }
+        /* ── Awards ── */
+        .awards-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 8.5pt;
+            color: #333;
+        }
 
-    .rank-1 { background: #FAC775; color: #633806; }
-    .rank-2 { background: #ebebeb; color: #555; border: 0.5pt solid #ccc; }
+        .award-chip {
+            padding: 3px 9px;
+            border: 0.5pt solid #ddd;
+            background: #fafaf8;
+            white-space: nowrap;
+        }
 
-    /* ── Skills ── */
-    .skills-cols {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px 32px;
-    }
+        .award-chip b {
+            color: #1a1a1a;
+        }
 
-    .skill-label {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 8pt;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #aaa;
-      margin-bottom: 6px;
-    }
+        /* ── Skills ── */
+        .skills-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 20px;
+        }
 
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-    }
+        .skill-row {
+            font-family: 'Inter', sans-serif;
+            font-size: 8.5pt;
+            line-height: 1.4;
+            color: #333;
+        }
 
-    .skill-tag {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 8.5pt;
-      padding: 2px 8px;
-      border: 0.5pt solid #ccc;
-      color: #444;
-      background: #fff;
-    }
+        .skill-row b {
+            color: #1a1a1a;
+            font-weight: bold;
+        }
 
-    .cert-list { margin: 0; padding: 0; list-style: none; }
+        .cert-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
-    .cert-list li {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 9pt;
-      color: #444;
-      padding: 3px 0;
-      border-bottom: 0.5pt solid #eee;
-    }
+        .cert-list li {
+            font-family: 'Inter', sans-serif;
+            font-size: 8.5pt;
+            color: #333;
+            padding: 1px 0;
+        }
 
-    .cert-list li:last-child { border-bottom: none; }
+        /* ── Print / PDF ── */
+        @media print {
+            @page {
+                size: A4;
+                margin: 8mm 12mm;
+            }
 
-    /* ── Print / PDF ── */
-    @media print {
-      @page {
-        size: A4;
-        margin: 0; /* Forces the browser to remove headers/footers */
-      }
+            body {
+                background: #fff;
+                margin: 0;
+            }
 
-      body { 
-        background: #fff; 
-        margin: 18mm 16mm; /* Moves margin to body to avoid clipping */
-      }
+            .lang-toggle {
+                display: none !important;
+            }
 
-      /* HIDE THE BUTTONS WHEN PRINTING */
-      .lang-toggle {
-        display: none !important;
-      }
+            .cv-wrap {
+                padding: 0;
+                margin: 0;
+                max-width: 100%;
+                box-shadow: none;
+            }
 
-      .cv-wrap {
-        padding: 0;
-        margin: 0;
-        max-width: 100%;
-        box-shadow: none; /* Remove shadow for printing */
-      }
-
-      .cv-section    { page-break-inside: avoid; }
-      .entry         { page-break-inside: avoid; }
-      .project-item  { page-break-inside: avoid; }
-      .award-item    { page-break-inside: avoid; }
-    }
-  </style>
+            .cv-section,
+            .entry,
+            .project-item {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- Language Selection Buttons -->
-  <div class="lang-toggle">
-    <button id="btn-en" class="active" onclick="switchLanguage('en')">English</button>
-    <button id="btn-fr" onclick="switchLanguage('fr')">Français</button>
-  </div>
+    <!-- Language Selection Buttons -->
+    <div class="lang-toggle">
+        <button id="btn-en" class="active" onclick="switchLanguage('en')">English</button>
+        <button id="btn-fr" onclick="switchLanguage('fr')">Français</button>
+    </div>
 
-  <!-- ENGLISH VERSION -->
-  <div id="cv-en" class="cv-wrap">
-    <!-- Header -->
-    <header class="cv-header">
-      <div>
-        <h1 class="cv-name">Nekkaz Mohamed Tayeb</h1>
-        <p class="cv-subtitle">Automatic &amp; Industrial Computing &nbsp;&middot;&nbsp; AI &amp; Robotics Systems</p>
-      </div>
-      <div class="cv-contact">
-        <div>Blida, Algeria</div>
-        <div>0540 923 909</div>
-        <div><a href="mailto:mohameddz1105@gmail.com">mohameddz1105@gmail.com</a></div>
-        <div><a href="https://www.linkedin.com/in/mohamed-tayeb-nekkaz-18b199330/">linkedin.com/in/mohamed-tayeb-nekkaz</a></div>
-      </div>
-    </header>
+    <!-- ENGLISH VERSION -->
+    <div id="cv-en" class="cv-wrap">
+        <!-- Header -->
+        <header class="cv-header">
+            <div>
+                <h1 class="cv-name">Nekkaz Mohamed Tayeb</h1>
+                <p class="cv-subtitle">Automation &amp; Industrial Computing Engineer — AI, Computer Vision &amp; Robotics</p>
+            </div>
+            <div class="cv-contact">
+                <div>Blida, Algeria</div>
+                <div>+213 540 923 909</div>
+                <div><a href="mailto:mohameddz1105@gmail.com">mohameddz1105@gmail.com</a></div>
+                <div><a href="https://www.linkedin.com/in/mohamed-tayeb-nekkaz-18b199330/">linkedin.com/in/mohamed-tayeb-nekkaz</a></div>
+            </div>
+        </header>
 
-    <!-- Profile -->
-    <section class="cv-section">
-      <div class="cv-section-label">Profile</div>
-      <p class="summary-text">
-        Master's student in Automatic and Industrial Computing with demonstrated expertise in industrial R&amp;D, computer vision, local LLM deployment, and autonomous robotic systems. Multiple national competition winner with a consistent record of delivering end-to-end technical projects — from algorithm design to hardware integration. Experienced in communicating complex technical concepts as a trainer and lecturer across university and vocational settings.
-      </p>
-    </section>
+        <!-- Profile -->
+        <section class="cv-section">
+            <div class="cv-section-label">Profile</div>
+            <p class="summary-text">
+                Master's student (M2) in Automatic and Industrial Computing, combining industrial automation
+                and control (PLC programming, industrial communication protocols) with AI and computer vision
+                for applied engineering problems. Experience spans PLC-to-LLM integration, autonomous drone
+                systems, and computer vision pipelines, with end-to-end delivery from algorithm design to
+                hardware deployment. Multiple national engineering-competition awards.
+            </p>
+        </section>
 
-    <!-- Education -->
-    <section class="cv-section">
-      <div class="cv-section-label">Education</div>
+        <!-- Education -->
+        <section class="cv-section">
+            <div class="cv-section-label">Education</div>
 
-      <div class="entry">
-        <div class="entry-main">
-          <p class="entry-role">M1 — Automatic and Industrial Computing</p>
-          <p class="entry-org">Saad Dahlab University Blida 1</p>
-        </div>
-        <div class="entry-date">2025 – Present</div>
-      </div>
+            <div class="entry">
+                <div class="entry-main">
+                    <p class="entry-role">M2 — Automatic and Industrial Computing</p>
+                    <p class="entry-org">Saad Dahlab University, Blida 1</p>
+                </div>
+                <div class="entry-date">2025 – Present</div>
+            </div>
 
-      <div class="entry">
-        <div class="entry-main">
-          <p class="entry-role">Licence Degree — Automatic Engineering</p>
-          <p class="entry-org">Saad Dahlab University Blida 1</p>
-        </div>
-        <div class="entry-date">Graduated 2025</div>
-      </div>
-    </section>
+            <div class="entry">
+                <div class="entry-main">
+                    <p class="entry-role">Licence — Automatic Engineering</p>
+                    <p class="entry-org">Saad Dahlab University, Blida 1</p>
+                </div>
+                <div class="entry-date">Graduated 2025</div>
+            </div>
+        </section>
 
-    <!-- Experience -->
-    <section class="cv-section">
-      <div class="cv-section-label">Experience</div>
+        <!-- Experience -->
+        <section class="cv-section">
+            <div class="cv-section-label">Experience</div>
 
-      <div class="entry">
-        <div class="entry-main">
-          <p class="entry-role">R&amp;D Intern — Autonomous Systems</p>
-          <p class="entry-org">Centre de Recherche en Technologies Industrielles (CRTI)</p>
-          <ul class="entry-bullets">
-            <li>Participated in an intensive research program focused on drone technology and autonomous flight systems.</li>
-            <li>Designed algorithms and integrated hardware components to develop and validate fully autonomous drone capabilities.</li>
-          </ul>
-        </div>
-        <div class="entry-date">Feb – May 2025</div>
-      </div>
+            <div class="entry">
+                <div class="entry-main">
+                    <p class="entry-role">R&amp;D Intern — Autonomous Systems</p>
+                    <p class="entry-org">Centre de Recherche en Technologies Industrielles (CRTI)</p>
+                    <ul class="entry-bullets">
+                        <li>Contributed to a research program on autonomous drone flight, working across
+                            control/algorithm development, hardware integration, and validation testing.</li>
+                    </ul>
+                </div>
+                <div class="entry-date">Feb – May 2025</div>
+            </div>
 
-      <div class="entry">
-        <div class="entry-main">
-          <p class="entry-role">Industrial Automation Trainee</p>
-          <p class="entry-org">Sonelgaz</p>
-          <ul class="entry-bullets">
-            <li>Completed hands-on training in PLC programming and industrial automation workflows.</li>
-          </ul>
-        </div>
-        <div class="entry-date">Sep – Oct 2024</div>
-      </div>
+            <div class="entry">
+                <div class="entry-main">
+                    <p class="entry-role">Industrial Automation Trainee</p>
+                    <p class="entry-org">Sonelgaz</p>
+                    <ul class="entry-bullets">
+                        <li>Hands-on training in PLC programming and industrial automation workflows in a
+                            real production environment.</li>
+                    </ul>
+                </div>
+                <div class="entry-date">Sep – Oct 2024</div>
+            </div>
 
-      <div class="entry">
-        <div class="entry-main">
-          <p class="entry-role">Technical Trainer &amp; Lecturer</p>
-          <p class="entry-org">CSCC Club &nbsp;&middot;&nbsp; Academic Tutoring &nbsp;&middot;&nbsp; Vocational Training Conference</p>
-          <ul class="entry-bullets">
-            <li>Delivered foundational robotics training sessions for university club members at CSCC Club.</li>
-            <li>Tutored first-year Science &amp; Technology students in C programming outside the formal curriculum.</li>
-            <li>Presented a specialised seminar (February 2026) to vocational training students on leveraging AI for practical problem-solving.</li>
-          </ul>
-        </div>
-        <div class="entry-date">2024 – Present</div>
-      </div>
-    </section>
+            <div class="entry">
+                <div class="entry-main">
+                    <p class="entry-role">Technical Trainer &amp; Lecturer</p>
+                    <p class="entry-org">CSCC Club &nbsp;&middot;&nbsp; Academic Tutoring &nbsp;&middot;&nbsp; Vocational Training Conference</p>
+                    <ul class="entry-bullets">
+                        <li>Delivered robotics training sessions and C-programming tutoring for first-year
+                            students; presented a seminar (Feb. 2026) on applying AI to practical
+                            problem-solving.</li>
+                    </ul>
+                </div>
+                <div class="entry-date">2024 – Present</div>
+            </div>
+        </section>
 
-    <!-- Projects -->
-    <section class="cv-section">
-      <div class="cv-section-label">Key Projects</div>
-      <div class="projects-grid">
+        <!-- Projects -->
+        <section class="cv-section">
+            <div class="cv-section-label">Key Projects</div>
+            <div class="projects-grid">
 
-        <div class="project-item">
-          <p class="project-name">Smart Security &amp; Tracking System</p>
-          <p class="project-desc">End-to-end computer vision pipeline for real-time detection, recognition, and persistent tracking of individuals using facial features, body dynamics, and clothing attributes.</p>
-        </div>
+                <div class="project-item">
+                    <div class="project-header-row">
+                        <p class="project-name">AI Copilot for Industrial PLCs</p>
+                        <span class="project-tag">S7-1515 &middot; OPC UA</span>
+                    </div>
+                    <p class="project-desc">Connected a Siemens S7-1515 PLC to an LLM via OPC UA and Python
+                        for plain-language fault explanation, and to translate operator requests into PLC
+                        actions requiring human authorization before execution.</p>
+                </div>
 
-        <div class="project-item">
-          <p class="project-name">Industrial Quality Detection AI</p>
-          <p class="project-desc">Automated defect detection system for manufacturing lines, identifying production anomalies in real time using advanced computer vision methods.</p>
-        </div>
+                <div class="project-item">
+                    <div class="project-header-row">
+                        <p class="project-name">IoT Industrial Control Enclosure</p>
+                        <span class="project-tag">TM200 &middot; Modbus TCP</span>
+                    </div>
+                    <p class="project-desc">Built a control panel driving 3 pumps and 2 fans through VFDs in
+                        manual/automatic mode via a Schneider TM200 PLC, with remote web-based monitoring and
+                        control hosted on a Raspberry Pi over Modbus TCP.</p>
+                </div>
 
-        <div class="project-item">
-          <p class="project-name">Agricultural Computer Vision Model</p>
-          <p class="project-desc">Lightweight plant disease detection model exceeding 96% accuracy — trained on 500 images in under one hour, optimised for low computational cost and field deployment.</p>
-        </div>
+                <div class="project-item">
+                    <div class="project-header-row">
+                        <p class="project-name">Agricultural Computer Vision Model</p>
+                        <span class="project-tag">Deep Learning</span>
+                    </div>
+                    <p class="project-desc">Lightweight plant-disease classification model trained on a
+                        500-image dataset with a held-out test split, reaching 96% test accuracy in under one
+                        hour of training; optimized for low compute cost and field deployment.</p>
+                </div>
 
-        <div class="project-item">
-          <p class="project-name">Smart Excel Manager (Local LLM App)</p>
-          <p class="project-desc">Desktop application integrating a locally-run LLM, enabling non-technical users to analyse, clean, and process spreadsheet data entirely offline — no cloud dependency.</p>
-        </div>
+                <div class="project-item">
+                    <div class="project-header-row">
+                        <p class="project-name">Industrial Quality Detection AI</p>
+                        <span class="project-tag">Edge AI</span>
+                    </div>
+                    <p class="project-desc">Computer-vision-based defect detection system for manufacturing
+                        lines, identifying production anomalies in real time.</p>
+                </div>
 
-      </div>
-    </section>
+            </div>
+        </section>
 
-    <!-- Awards -->
-    <section class="cv-section">
-      <div class="cv-section-label">Awards &amp; Competitions</div>
-      <div class="awards-grid">
-        <div class="award-item"><span class="award-rank rank-1">1st Place</span> NEST Hackathon, 2025</div>
-        <div class="award-item"><span class="award-rank rank-1">1st Place</span> Algeria 2.0, 2025</div>
-        <div class="award-item"><span class="award-rank rank-1">1st Place</span> ROBOKO, 2024</div>
-        <div class="award-item"><span class="award-rank rank-2">2nd Place</span> AEC Competition, 2025</div>
-        <div class="award-item"><span class="award-rank rank-2">2nd Place</span> ROBOKO, 2025</div>
-      </div>
-    </section>
+        <!-- Awards -->
+        <section class="cv-section">
+            <div class="cv-section-label">Awards &amp; Competitions</div>
+            <div class="awards-row">
+                <span class="award-chip"><b>1st</b> — NEST Hackathon, 2025</span>
+                <span class="award-chip"><b>1st</b> — Algeria 2.0, 2025</span>
+                <span class="award-chip"><b>1st</b> — ROBOKO, 2024</span>
+                <span class="award-chip"><b>2nd</b> — AEC Competition, 2025</span>
+            </div>
+        </section>
 
-    <!-- Skills & Certifications -->
-    <section class="cv-section">
-      <div class="cv-section-label">Skills &amp; Certifications</div>
-      <div class="skills-cols">
+        <!-- Skills & Certifications -->
+        <section class="cv-section">
+            <div class="cv-section-label">Technical Skills &amp; Certifications</div>
+            <div class="skills-cols">
 
-        <div>
-          <div class="skill-label">Programming Languages</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Python (Advanced)</span>
-            <span class="skill-tag">C++ (Proficient)</span>
-            <span class="skill-tag">C (Intermediate)</span>
-            <span class="skill-tag">PLC / Ladder Logic</span>
-          </div>
-        </div>
+                <div class="skill-row">
+                    <b>Programming:</b> Python, C++, C, PLC programming
+                </div>
 
-        <div>
-          <div class="skill-label">Robotics &amp; Control</div>
-          <div class="skill-tags">
-            <span class="skill-tag">ROS2</span>
-            <span class="skill-tag">Control Theory</span>
-            <span class="skill-tag">Robot Arm Control</span>
-            <span class="skill-tag">Gazebo</span>
-            <span class="skill-tag">CoppeliaSim</span>
-          </div>
-        </div>
+                <div class="skill-row">
+                    <b>Industrial Automation:</b> Siemens TIA Portal, S7-1200/1500, OPC UA, Modbus TCP,
+                    Schneider EcoStruxure, VFDs
+                </div>
 
-        <div>
-          <div class="skill-label">AI &amp; Computer Vision</div>
-          <div class="skill-tags">
-            <span class="skill-tag">OpenCV</span>
-            <span class="skill-tag">Local LLM Deployment</span>
-            <span class="skill-tag">Object Detection</span>
-            <span class="skill-tag">Segmentation</span>
-            <span class="skill-tag">Face Recognition</span>
-          </div>
-        </div>
+                <div class="skill-row">
+                    <b>Control:</b> Control theory, PLC-based control systems, industrial communication
+                    networks
+                </div>
 
-        <div>
-          <div class="skill-label">Certifications</div>
-          <ul class="cert-list">
-            <li>Deep Learning Specialization — Coursera, 2024</li>
-            <li>Machine Learning Specialization — Coursera, 2024</li>
-            <li>PCB Design Certificate — 2024</li>
-            <li>Robotic Trainer Certificate — 2023</li>
-          </ul>
-        </div>
+                <div class="skill-row">
+                    <b>AI &amp; Computer Vision:</b> OpenCV, object detection, segmentation, anomaly
+                    detection, local LLM deployment
+                </div>
 
-      </div>
-    </section>
-  </div>
+                <div class="skill-row">
+                    <b>Robotics:</b> ROS 2, Gazebo, autonomous systems
+                </div>
 
-  <!-- FRENCH VERSION -->
-  <div id="cv-fr" class="cv-wrap" style="display: none;">
-    <!-- Header -->
-    <header class="cv-header">
-      <div>
-        <h1 class="cv-name">Nekkaz Mohamed Tayeb</h1>
-        <p class="cv-subtitle">Automatique et Informatique Industrielle &nbsp;&middot;&nbsp; IA &amp; Systèmes Robotiques</p>
-      </div>
-      <div class="cv-contact">
-        <div>Blida, Algérie</div>
-        <div>0540 923 909</div>
-        <div><a href="mailto:mohameddz1105@gmail.com">mohameddz1105@gmail.com</a></div>
-        <div><a href="https://www.linkedin.com/in/mohamed-tayeb-nekkaz-18b199330/">linkedin.com/in/mohamed-tayeb-nekkaz</a></div>
-      </div>
-    </header>
+                <div>
+                    <ul class="cert-list">
+                        <li>Deep Learning Specialization — Coursera, 2024</li>
+                        <li>Machine Learning Specialization — Coursera, 2024</li>
+                        <li>PCB Design — Training certificate, 2024</li>
+                        <li>Robotic Trainer — Training certificate, 2023</li>
+                    </ul>
+                </div>
 
-    <!-- Profile -->
-    <section class="cv-section">
-      <div class="cv-section-label">Profil</div>
-      <p class="summary-text">
-        Étudiant en Master d'Automatique et Informatique Industrielle avec une expertise démontrée en R&amp;D industrielle, vision par ordinateur, déploiement de LLM en local et systèmes robotiques autonomes. Vainqueur de multiples compétitions nationales avec un historique constant de réalisation de projets techniques de bout en bout — de la conception d'algorithmes à l'intégration matérielle. Expérimenté dans la communication de concepts techniques complexes en tant que formateur et conférencier dans des contextes universitaires et de formation professionnelle.
-      </p>
-    </section>
+            </div>
+        </section>
+    </div>
 
-    <!-- Education -->
-    <section class="cv-section">
-      <div class="cv-section-label">Formation</div>
+    <!-- FRENCH VERSION -->
+    <div id="cv-fr" class="cv-wrap" style="display: none;">
+        <!-- Header -->
+        <header class="cv-header">
+            <div>
+                <h1 class="cv-name">Nekkaz Mohamed Tayeb</h1>
+                <p class="cv-subtitle">Ingénieur Automatique &amp; Informatique Industrielle — IA, Vision par Ordinateur &amp; Robotique</p>
+            </div>
+            <div class="cv-contact">
+                <div>Blida, Algérie</div>
+                <div>+213 540 923 909</div>
+                <div><a href="mailto:mohameddz1105@gmail.com">mohameddz1105@gmail.com</a></div>
+                <div><a href="https://www.linkedin.com/in/mohamed-tayeb-nekkaz-18b199330/">linkedin.com/in/mohamed-tayeb-nekkaz</a></div>
+            </div>
+        </header>
 
-      <div class="entry">
-        <div class="entry-main">
-          <p class="entry-role">M1 — Automatique et Informatique Industrielle</p>
-          <p class="entry-org">Université Saad Dahlab de Blida 1</p>
-        </div>
-        <div class="entry-date">2025 – Présent</div>
-      </div>
+        <!-- Profile -->
+        <section class="cv-section">
+            <div class="cv-section-label">Profil</div>
+            <p class="summary-text">
+                Étudiant en Master 2 Automatique et Informatique Industrielle, alliant automatisme et contrôle
+                industriel (programmation d'automates, protocoles de communication industrielle) à l'IA et à la
+                vision par ordinateur pour des problématiques d'ingénierie appliquée. Expérience couvrant
+                l'intégration automate-LLM, les systèmes de drones autonomes et les pipelines de vision par
+                ordinateur, avec une réalisation de bout en bout, de la conception d'algorithmes au déploiement
+                matériel. Plusieurs distinctions lors de compétitions nationales d'ingénierie.
+            </p>
+        </section>
 
-      <div class="entry">
-        <div class="entry-main">
-          <p class="entry-role">Licence — Ingénierie Automatique</p>
-          <p class="entry-org">Université Saad Dahlab de Blida 1</p>
-        </div>
-        <div class="entry-date">Diplômé en 2025</div>
-      </div>
-    </section>
+        <!-- Education -->
+        <section class="cv-section">
+            <div class="cv-section-label">Formation</div>
 
-    <!-- Experience -->
-    <section class="cv-section">
-      <div class="cv-section-label">Expérience</div>
+            <div class="entry">
+                <div class="entry-main">
+                    <p class="entry-role">Master 2 — Automatique et Informatique Industrielle</p>
+                    <p class="entry-org">Université Saad Dahlab, Blida 1</p>
+                </div>
+                <div class="entry-date">2025 – Présent</div>
+            </div>
 
-      <div class="entry">
-        <div class="entry-main">
-          <p class="entry-role">Stagiaire R&amp;D — Systèmes Autonomes</p>
-          <p class="entry-org">Centre de Recherche en Technologies Industrielles (CRTI)</p>
-          <ul class="entry-bullets">
-            <li>A participé à un programme de recherche intensif axé sur la technologie des drones et les systèmes de vol autonome.</li>
-            <li>A conçu des algorithmes et intégré des composants matériels pour développer et valider des capacités de drones entièrement autonomes.</li>
-          </ul>
-        </div>
-        <div class="entry-date">Fév – Mai 2025</div>
-      </div>
+            <div class="entry">
+                <div class="entry-main">
+                    <p class="entry-role">Licence — Ingénierie Automatique</p>
+                    <p class="entry-org">Université Saad Dahlab, Blida 1</p>
+                </div>
+                <div class="entry-date">Diplômé en 2025</div>
+            </div>
+        </section>
 
-      <div class="entry">
-        <div class="entry-main">
-          <p class="entry-role">Stagiaire en Automatisme Industriel</p>
-          <p class="entry-org">Sonelgaz</p>
-          <ul class="entry-bullets">
-            <li>A suivi une formation pratique sur la programmation d'Automates Programmables Industriels (API) et les flux de travail en automatisation.</li>
-          </ul>
-        </div>
-        <div class="entry-date">Sep – Oct 2024</div>
-      </div>
+        <!-- Experience -->
+        <section class="cv-section">
+            <div class="cv-section-label">Expérience</div>
 
-      <div class="entry">
-        <div class="entry-main">
-          <p class="entry-role">Formateur Technique et Conférencier</p>
-          <p class="entry-org">Club CSCC &nbsp;&middot;&nbsp; Soutien Universitaire &nbsp;&middot;&nbsp; Conférence de Formation Professionnelle</p>
-          <ul class="entry-bullets">
-            <li>A animé des sessions de formation de base en robotique pour les membres du club universitaire CSCC.</li>
-            <li>A dispensé des cours particuliers en programmation C à des étudiants de première année en Sciences et Technologies (ST).</li>
-            <li>A présenté un séminaire spécialisé (Février 2026) à des stagiaires de la formation professionnelle sur l'utilisation de l'IA pour la résolution de problèmes pratiques.</li>
-          </ul>
-        </div>
-        <div class="entry-date">2024 – Présent</div>
-      </div>
-    </section>
+            <div class="entry">
+                <div class="entry-main">
+                    <p class="entry-role">Stagiaire R&amp;D — Systèmes Autonomes</p>
+                    <p class="entry-org">Centre de Recherche en Technologies Industrielles (CRTI)</p>
+                    <ul class="entry-bullets">
+                        <li>A contribué à un programme de recherche sur le vol autonome de drones, en
+                            intervenant sur le contrôle/les algorithmes, l'intégration matérielle et les tests
+                            de validation.</li>
+                    </ul>
+                </div>
+                <div class="entry-date">Fév – Mai 2025</div>
+            </div>
 
-    <!-- Projects -->
-    <section class="cv-section">
-      <div class="cv-section-label">Projets Principaux</div>
-      <div class="projects-grid">
+            <div class="entry">
+                <div class="entry-main">
+                    <p class="entry-role">Stagiaire en Automatisme Industriel</p>
+                    <p class="entry-org">Sonelgaz</p>
+                    <ul class="entry-bullets">
+                        <li>Formation pratique à la programmation d'automates (API) et aux processus
+                            d'automatisation industrielle en environnement de production réel.</li>
+                    </ul>
+                </div>
+                <div class="entry-date">Sep – Oct 2024</div>
+            </div>
 
-        <div class="project-item">
-          <p class="project-name">Système Intelligent de Sécurité et Suivi</p>
-          <p class="project-desc">Pipeline de vision par ordinateur pour la détection, la reconnaissance et le suivi continu des individus en temps réel à l'aide des traits du visage, de la dynamique corporelle et des attributs vestimentaires.</p>
-        </div>
+            <div class="entry">
+                <div class="entry-main">
+                    <p class="entry-role">Formateur Technique et Conférencier</p>
+                    <p class="entry-org">Club CSCC &nbsp;&middot;&nbsp; Soutien Universitaire &nbsp;&middot;&nbsp; Conférence de Formation Professionnelle</p>
+                    <ul class="entry-bullets">
+                        <li>A animé des sessions de formation en robotique et des cours de programmation C
+                            pour des étudiants de première année ; a présenté un séminaire (fév. 2026) sur
+                            l'application de l'IA à la résolution de problèmes pratiques.</li>
+                    </ul>
+                </div>
+                <div class="entry-date">2024 – Présent</div>
+            </div>
+        </section>
 
-        <div class="project-item">
-          <p class="project-name">IA de Détection de Qualité Industrielle</p>
-          <p class="project-desc">Système automatisé de détection de défauts pour les chaînes de fabrication, identifiant les anomalies de production en temps réel grâce à des méthodes avancées de vision par ordinateur.</p>
-        </div>
+        <!-- Projects -->
+        <section class="cv-section">
+            <div class="cv-section-label">Projets Principaux</div>
+            <div class="projects-grid">
 
-        <div class="project-item">
-          <p class="project-name">Vision par Ordinateur pour l'Agriculture</p>
-          <p class="project-desc">Modèle léger de détection des maladies des plantes dépassant 96 % de précision — entraîné sur 500 images en moins d'une heure, optimisé pour un faible coût de calcul et un déploiement sur le terrain.</p>
-        </div>
+                <div class="project-item">
+                    <div class="project-header-row">
+                        <p class="project-name">Copilote IA pour Automates Industriels</p>
+                        <span class="project-tag">S7-1515 &middot; OPC UA</span>
+                    </div>
+                    <p class="project-desc">Connexion d'un automate Siemens S7-1515 à un LLM via OPC UA et
+                        Python pour expliquer les défauts en langage clair et traduire les demandes opérateur
+                        en actions automate soumises à validation humaine avant exécution.</p>
+                </div>
 
-        <div class="project-item">
-          <p class="project-name">Smart Excel Manager (App LLM Local)</p>
-          <p class="project-desc">Application de bureau intégrant un LLM exécuté localement, permettant aux utilisateurs non techniques d'analyser, de nettoyer et de traiter des données de tableur hors ligne — sans cloud.</p>
-        </div>
+                <div class="project-item">
+                    <div class="project-header-row">
+                        <p class="project-name">Armoire de Commande Industrielle IoT</p>
+                        <span class="project-tag">TM200 &middot; Modbus TCP</span>
+                    </div>
+                    <p class="project-desc">Armoire de commande pilotant 3 pompes et 2 ventilateurs via
+                        variateurs de vitesse en mode manuel/automatique avec un automate Schneider TM200,
+                        supervision et commande à distance via une interface web hébergée sur Raspberry Pi en
+                        Modbus TCP.</p>
+                </div>
 
-      </div>
-    </section>
+                <div class="project-item">
+                    <div class="project-header-row">
+                        <p class="project-name">Vision par Ordinateur pour l'Agriculture</p>
+                        <span class="project-tag">Deep Learning</span>
+                    </div>
+                    <p class="project-desc">Modèle léger de classification des maladies des plantes, entraîné
+                        sur un jeu de données de 500 images avec séparation entraînement/test, atteignant 96 %
+                        de précision sur le jeu de test en moins d'une heure d'entraînement ; optimisé pour un
+                        faible coût de calcul et un déploiement terrain.</p>
+                </div>
 
-    <!-- Awards -->
-    <section class="cv-section">
-      <div class="cv-section-label">Prix et Compétitions</div>
-      <div class="awards-grid">
-        <div class="award-item"><span class="award-rank rank-1">1ère Place</span> Hackathon NEST, 2025</div>
-        <div class="award-item"><span class="award-rank rank-1">1ère Place</span> Algeria 2.0, 2025</div>
-        <div class="award-item"><span class="award-rank rank-1">1ère Place</span> ROBOKO, 2024</div>
-        <div class="award-item"><span class="award-rank rank-2">2ème Place</span> Compétition AEC, 2025</div>
-        <div class="award-item"><span class="award-rank rank-2">2ème Place</span> ROBOKO, 2025</div>
-      </div>
-    </section>
+                <div class="project-item">
+                    <div class="project-header-row">
+                        <p class="project-name">IA de Détection de Qualité Industrielle</p>
+                        <span class="project-tag">Edge AI</span>
+                    </div>
+                    <p class="project-desc">Système de détection de défauts par vision par ordinateur pour
+                        chaînes de fabrication, identifiant les anomalies de production en temps réel.</p>
+                </div>
 
-    <!-- Skills & Certifications -->
-    <section class="cv-section">
-      <div class="cv-section-label">Compétences et Certifications</div>
-      <div class="skills-cols">
+            </div>
+        </section>
 
-        <div>
-          <div class="skill-label">Langages de Programmation</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Python (Avancé)</span>
-            <span class="skill-tag">C++ (Compétent)</span>
-            <span class="skill-tag">C (Intermédiaire)</span>
-            <span class="skill-tag">API / Langage Ladder</span>
-          </div>
-        </div>
+        <!-- Awards -->
+        <section class="cv-section">
+            <div class="cv-section-label">Prix et Compétitions</div>
+            <div class="awards-row">
+                <span class="award-chip"><b>1ère</b> — Hackathon NEST, 2025</span>
+                <span class="award-chip"><b>1ère</b> — Algeria 2.0, 2025</span>
+                <span class="award-chip"><b>1ère</b> — ROBOKO, 2024</span>
+                <span class="award-chip"><b>2ème</b> — Compétition AEC, 2025</span>
+            </div>
+        </section>
 
-        <div>
-          <div class="skill-label">Robotique et Contrôle</div>
-          <div class="skill-tags">
-            <span class="skill-tag">ROS2</span>
-            <span class="skill-tag">Théorie du Contrôle</span>
-            <span class="skill-tag">Contrôle de Bras Robotique</span>
-            <span class="skill-tag">Gazebo</span>
-            <span class="skill-tag">CoppeliaSim</span>
-          </div>
-        </div>
+        <!-- Skills & Certifications -->
+        <section class="cv-section">
+            <div class="cv-section-label">Compétences Techniques et Certifications</div>
+            <div class="skills-cols">
 
-        <div>
-          <div class="skill-label">IA et Vision par Ordinateur</div>
-          <div class="skill-tags">
-            <span class="skill-tag">OpenCV</span>
-            <span class="skill-tag">Déploiement de LLM local</span>
-            <span class="skill-tag">Détection d'objets</span>
-            <span class="skill-tag">Segmentation</span>
-            <span class="skill-tag">Reconnaissance Faciale</span>
-          </div>
-        </div>
+                <div class="skill-row">
+                    <b>Programmation :</b> Python, C++, C, programmation d'automates
+                </div>
 
-        <div>
-          <div class="skill-label">Certifications</div>
-          <ul class="cert-list">
-            <li>Spécialisation Deep Learning — Coursera, 2024</li>
-            <li>Spécialisation Machine Learning — Coursera, 2024</li>
-            <li>Certificat de Conception de PCB — 2024</li>
-            <li>Certificat de Formateur en Robotique — 2023</li>
-          </ul>
-        </div>
+                <div class="skill-row">
+                    <b>Automatisme Industriel :</b> Siemens TIA Portal, S7-1200/1500, OPC UA, Modbus TCP,
+                    Schneider EcoStruxure, variateurs VFD
+                </div>
 
-      </div>
-    </section>
-  </div>
+                <div class="skill-row">
+                    <b>Contrôle :</b> Théorie du contrôle, systèmes de contrôle sur automate, réseaux de
+                    communication industrielle
+                </div>
 
-  <!-- JavaScript to handle language toggle -->
-  <script>
-    function switchLanguage(lang) {
-      // Get the containers and buttons
-      const cvEn = document.getElementById('cv-en');
-      const cvFr = document.getElementById('cv-fr');
-      const btnEn = document.getElementById('btn-en');
-      const btnFr = document.getElementById('btn-fr');
+                <div class="skill-row">
+                    <b>IA et Vision par Ordinateur :</b> OpenCV, détection d'objets, segmentation, détection
+                    d'anomalies, déploiement de LLM en local
+                </div>
 
-      if (lang === 'en') {
-        // Show English, Hide French
-        cvEn.style.display = 'block';
-        cvFr.style.display = 'none';
-        // Update button styles
-        btnEn.classList.add('active');
-        btnFr.classList.remove('active');
-      } else if (lang === 'fr') {
-        // Show French, Hide English
-        cvEn.style.display = 'none';
-        cvFr.style.display = 'block';
-        // Update button styles
-        btnFr.classList.add('active');
-        btnEn.classList.remove('active');
-      }
-    }
-  </script>
+                <div class="skill-row">
+                    <b>Robotique :</b> ROS 2, Gazebo, systèmes autonomes
+                </div>
+
+                <div>
+                    <ul class="cert-list">
+                        <li>Spécialisation Deep Learning — Coursera, 2024</li>
+                        <li>Spécialisation Machine Learning — Coursera, 2024</li>
+                        <li>Conception de PCB — Certificat de formation, 2024</li>
+                        <li>Formateur en Robotique — Certificat de formation, 2023</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript to handle language toggle -->
+    <script>
+        function switchLanguage(lang) {
+            const cvEn = document.getElementById('cv-en');
+            const cvFr = document.getElementById('cv-fr');
+            const btnEn = document.getElementById('btn-en');
+            const btnFr = document.getElementById('btn-fr');
+
+            if (lang === 'en') {
+                cvEn.style.display = 'block';
+                cvFr.style.display = 'none';
+                btnEn.classList.add('active');
+                btnFr.classList.remove('active');
+            } else if (lang === 'fr') {
+                cvEn.style.display = 'none';
+                cvFr.style.display = 'block';
+                btnFr.classList.add('active');
+                btnEn.classList.remove('active');
+            }
+        }
+    </script>
 
 </body>
+
 </html>
